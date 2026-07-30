@@ -1398,6 +1398,49 @@ body,
     }
   }
 </style>
+
+<style id="v6-header-and-action-buttons">
+  /* Center the opening call to action with its arrow beneath it. */
+  .hero-scroll-cue {
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    text-align: center !important;
+  }
+
+  /* macOS-style pill action buttons. */
+  .action-bar .primary-button,
+  .action-bar .secondary-button {
+    min-height: 50px !important;
+    border: 1px solid #000000 !important;
+    border-radius: 999px !important;
+    background: #000000 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: -.01em !important;
+    overflow: hidden !important;
+  }
+
+  .action-bar .primary-button::before,
+  .action-bar .secondary-button::before {
+    display: none !important;
+  }
+
+  .action-bar .primary-button:hover:not(:disabled),
+  .action-bar .secondary-button:hover:not(:disabled) {
+    background: #161616 !important;
+    border-color: #161616 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+  }
+
+  .action-bar .primary-button:active:not(:disabled),
+  .action-bar .secondary-button:active:not(:disabled) {
+    transform: translateY(0);
+  }
+</style>
 </head>
 <body>
 <header class="app-header supaste-inspired-header">
@@ -1416,10 +1459,6 @@ body,
 <p class="header-copy">Create a personalized email signature.</p>
 </div>
 </div>
-</div>
-<div aria-hidden="true" class="hero-meta hero-meta-bottom">
-<span>Your signature / Your design</span>
-<span class="hero-meta-list"><span>01 Contact</span><span>02 CTA</span><span>03 Social</span><span>04 Brand</span></span>
 </div>
 <button aria-label="Start designing" class="hero-scroll-cue" id="hero-scroll-cue" type="button">Start designing</button>
 </header>
@@ -1585,7 +1624,7 @@ body,
 <div class="preview-toolbar studio-hero" id="studio-hero">
 <div aria-hidden="true" class="studio-cursor-glow"></div>
 <div class="studio-hero-copy">
-<span class="panel-kicker">Output / Preview</span>
+<span class="panel-kicker">Output / Preview / 02</span>
 <h2 id="preview-heading">Design Studio<span aria-hidden="true">.</span></h2>
 <p>See your changes in real-time below.</p>
 </div>
@@ -1597,7 +1636,7 @@ body,
 </div>
 <div class="action-bar">
 <button class="primary-button copy-glass" disabled="" id="copy-signature" type="button">
-<span aria-hidden="true" class="copy-logo-wrap"><img alt="" class="copy-logo" src="data:image/png;base64,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"/></span><strong>Copy signature</strong>
+<strong>Copy signature</strong>
 </button>
 <button class="secondary-button supaste-secondary" disabled="" id="download-html" type="button">
 <strong>Download a backup</strong>
@@ -1976,8 +2015,8 @@ body,
     <td bgcolor="${signatureBackground}" style="padding:10px 10px 0 10px;background-color:${signatureBackground};color:${primaryText};">${contactAreaHtml}</td>
   </tr>
   <tr>
-    <td bgcolor="${signatureBackground}" style="padding:8px 10px 10px 10px;background-color:${signatureBackground};font-family:Montserrat,Arial,sans-serif;font-size:9px;line-height:12px;color:${disclaimerText};">
-      Better Mortgage Corporation NMLS #330511. Equal Housing Lender. <a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" style="color:${disclaimerLink};text-decoration:none;">www.nmlsconsumeraccess.org</a>
+    <td bgcolor="${signatureBackground}" style="padding:8px 10px 10px 10px;background-color:${signatureBackground};font-family:Montserrat,Arial,sans-serif;font-size:6pt;line-height:8pt;color:${disclaimerText};">
+      BETTER MORTGAGE RESERVES THE RIGHT TO MODIFY OR DISCONTINUE PRODUCTS, PROMOTIONS AND BENEFITS AT ANY TIME WITHOUT NOTICE. Rates and Terms are subject to change at any time without notice and are subject to state restrictions. The Better Home Logo is Registered in the U.S. Patent and Trademark Office. © 2026 Better Home &amp; Finance Holding Company and/or its affiliates. Better is a family of companies. Better Mortgage Corporation provides home loans: Better Real Estate, LLC and Better Real Estate California Inc License #02164055 provides real estate services; Better Cover, LLC sells insurance products; and Better Settlement Services provides title insurance services; and Better Inspect, LLC provides home inspection services. All rights reserved. Home lending products offered by Better Mortgage Corporation. Better Mortgage Corporation is a direct lender. NMLS #330511. 1 World Trade Center, Floor 80, New York, NY 10007. Loans made or arranged pursuant to a California Finance Lenders Law License. Not available in all states. Equal Housing Lender. <a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" style="color:${disclaimerLink};text-decoration:none;">NMLS Consumer Access</a>
     </td>
   </tr>
 </table>`.trim();
